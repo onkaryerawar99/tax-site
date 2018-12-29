@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Indian Income Tax Calculator</title>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrapper">
+        <h1>Indian Income Tax Calculator</h1>
+        <p>gives you clarity</p>
+      </div>
+    </header>
+    <div class="container">
+      <main>
+        <div class="wrapper">
+          <form>
+            <label class="main__label"
+              >Yearly Gross Income
+              <input
+                id="yearly-salary"
+                class="main__input"
+                type="number"
+                name="grossIncome"
+                placeholder="₹"
+                required
+              />
+            </label>
+          </form>
+        </div>
+        <div class="results">
+          <div class="wrapper">
+            <h1 class="results__title">Amounts</h1>
+            <div class="results_entries">
+              <div class="result__entry">
+                <label class="result__entry__label">Taxable Income</label>
+                <span id="taxable-income" class="result__entry__value">--</span>
+              </div>
+              <div class="result__entry">
+                <label class="result__entry__label">Income Tax</label>
+                <span id="income-tax" class="result__entry__value tax">--</span>
+              </div>
+              <div class="result__entry">
+                <label class="result__entry__label">Profession Tax</label>
+                <span id="profession-tax" class="result__entry__value tax"
+                  >--</span
+                >
+              </div>
+              <div class="result__entry">
+                <label class="result__entry__label"
+                  >Education & Health Cess</label
+                >
+                <span id="cess-tax" class="result__entry__value tax">--</span>
+              </div>
+              <div class="result__entry">
+                <label class="result__entry__label">Total Deductions</label>
+                <span id="total-deductions" class="result__entry__value tax"
+                  >--</span
+                >
+              </div>
+              <div class="result__entry">
+                <label class="result__entry__label">Yearly Net Income</label>
+                <span id="yearly-net-income" class="result__entry__value"
+                  >--</span
+                >
+              </div>
+              <div class="result__entry">
+                <label class="result__entry__label">Monthly Income</label>
+                <span id="monthly-salary" class="result__entry__value">--</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <div class="secondary">
+        <h2>More options</h2>
+        <label class="secondary__entry">Age<br/>
+          <input type="radio" id="adult" name="age" value="adult" checked>Less than 60 Years</input><br>
+          <input type="radio" id="senior" name="age" value="senior">More than 60 Years and less than 80 Years</input><br>
+          <input type="radio" id="ultraSenior" name="age" value="ultraSenior">More than 80 Years</input><br><br>
+        </label>
+        <label class="secondary__entry">Tax free investments<br/>
+          <input type="number" id="investments" name="investments" class="" placeholder="Maximum of ₹ 150000"/>
+        </label>
+      </div>
+    </div>
+    <script src="scripts/app.js"></script>
+  </body>
+</html>
