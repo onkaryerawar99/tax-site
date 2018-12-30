@@ -56,7 +56,7 @@ function calculateSalary(event) {
       investments.value = 150000;
       investmentsValue = 150000;
     } else if (event.target.value < 0) {
-      investments.value = 0;
+      investments.value = null;
       investmentsValue = 0;
     } else if (event.target.value == 0) {
       investmentsValue = 0;
@@ -88,9 +88,9 @@ function calculateSalary(event) {
   }
 
   if (yearlySalaryValue <= 0) {
-    yearlySalary.value = 0;
+    yearlySalary.value = null;
     yearlySalaryValue = 0;
-    investments.value = 0;
+    investments.value = null;
     investmentsValue = 0;
   } else if (yearlySalaryValue > 0 && yearlySalaryValue <= taxFreeIncome) {
     totalTaxableIncomeValue = 0;
